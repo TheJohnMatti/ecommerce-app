@@ -43,7 +43,9 @@ export default function CheckoutPage() {
       subtotal += price;
     }
   }
-  const total = subtotal + deliveryPrice;
+
+  const taxes = subtotal * 0.13
+  const total = Math.round((subtotal + deliveryPrice + taxes)*100)/100;
 
   return (
     <Layout>
@@ -90,6 +92,10 @@ export default function CheckoutPage() {
           <div className="flex my-3">
             <h3 className="grow font-bold text-gray-400">Subtotal:</h3>
             <h3 className="font-bold">${subtotal}</h3>
+          </div>
+          <div className="flex my-3">
+            <h3 className="grow font-bold text-gray-400">Taxes (%13):</h3>
+            <h3 className="font-bold">${Math.round(taxes*100)/100}</h3>
           </div>
           <div className="flex my-3">
             <h3 className="grow font-bold text-gray-400">Delivery:</h3>
