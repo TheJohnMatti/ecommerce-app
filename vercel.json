@@ -1,7 +1,7 @@
 {
     "functions": {
         "/": {
-            "memory": 3009,
+            "memory": 512,
             "maxDuration": 60
         }
     }
