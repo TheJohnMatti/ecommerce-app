@@ -66,11 +66,11 @@ export default function CheckoutPage() {
             <div className="flex mt-1">
               <div className="grow font-bold">${productInfo.price}</div>
               <div>
-                <button onClick={() => lessOfThisProduct(productInfo._id)} className="border border-emerald-500 px-2 rounded-lg text-emerald-500">-</button>
+                <button onClick={() => lessOfThisProduct(productInfo._id)} className="border border-blue-300 px-2 rounded-lg text-blue-400">-</button>
                 <span className="px-2">
                   {selectedProducts.filter(id => id === productInfo._id).length}
                 </span>
-                <button onClick={() => moreOfThisProduct(productInfo._id)} className="bg-emerald-500 px-2 rounded-lg text-white">+</button>
+                <button onClick={() => moreOfThisProduct(productInfo._id)} className="bg-blue-400 px-2 rounded-lg text-white">+</button>
                 <button onClick={() => deleteProduct(productInfo._id)} className="px-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-5 object-fill">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
@@ -101,13 +101,13 @@ export default function CheckoutPage() {
             <h3 className="grow font-bold text-gray-400">Delivery:</h3>
             <h3 className="font-bold">${deliveryPrice}</h3>
           </div>
-          <div className="flex my-3 border-t pt-3 border-dashed border-emerald-500">
+          <div className="flex my-3 border-t pt-3 border-dashed border-blue-400">
             <h3 className="grow font-bold text-gray-400">Total:</h3>
             <h3 className="font-bold">${total}</h3>
           </div>
         </div>
         <input type="hidden" name="products" value={selectedProducts.join(',')}/>
-        <button type="submit" className="bg-emerald-500 px-5 py-2 rounded-xl font-bold text-white w-full my-4 shadow-emerald-300 shadow-lg">Pay ${total}</button>
+        <button type="submit" className="bg-blue-400 px-5 py-2 rounded-xl font-bold text-white w-full my-4 shadow-blue-200 shadow-lg">Pay ${total}</button>
       </form>
     </Layout>
   );
